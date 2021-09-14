@@ -1,0 +1,797 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: burlywood;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*//////////////////////////////////// empty div to show typing  //////////////////////////////*/
+#demo1{
+    position: absolute;
+    top: 30px;
+    left: 75px;
+    width: 90%;
+    height: 20%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+/*////////////////////////////////// whole keyboard hold here ////////////////////////////////////*/
+.keyboard{
+    margin-top: 150px;
+    background-color: rgb(61, 59, 59);
+    color: white;
+    width: 92vw;
+    height: 63vh;
+    border-radius: 50px;
+    position: relative;
+    padding: 35px 10px 30px 55px;
+}
+
+/*//////////////////////////////////////// first row ///////////////////////////////////////////////////*/
+
+#first-row{
+    display: flex;
+    margin: 25px 20px;
+}
+
+/* each btns got this */
+.btn{
+    /* margin-top: 0px; */
+    margin-right: 13px;
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(46, 45, 45);
+    border-radius: 20px;
+    color: white;
+    border-radius: 23px;
+    position: relative;
+    box-shadow: 0 0 0 6px #1a1919,
+           0 0 0 5px #181818;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* each btns got active */
+.btn:active{
+     box-shadow: inset 0 0 0 1px #131313,
+                 0 0 0 5px #131313;
+                 font-size: 11px;
+}
+
+/* to get different style to escape btn  */
+.esc-btn{
+    margin-right: 45px;
+    position: relative;
+    left: -20px;
+  }
+  .esc-btn::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -9px;
+    width: 63px;
+    height: 53px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: rgb(3, 3, 3); 
+}
+
+/*/// first row to make 4 section  */
+  
+/*//// f1 to f4 btns ///*/
+#first-row .part-1{
+    display: flex;
+    position: relative;
+    margin-right: 25px;
+}
+
+/*//// f1 to f4 btns background ///*/
+.part-1::before{
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -10px;
+    width: 238px;
+    height: 55px;
+    background-color: black; 
+}
+
+/*//// f5 to f8 btns ///*/
+#first-row .part-2{
+    display: flex;
+    position: relative;
+    margin-right: 25px;
+}
+
+/*//// f5 to f8 btns background ///*/
+#first-row .part-2::before{
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -9px;
+    width: 236px;
+    height: 55px;
+    /* outline: 1px solid rgb(12, 12, 12); */
+    background-color: black; 
+}
+
+/*//// f9 to f12 btns ///*/
+#first-row .part-3{
+    display: flex;
+    position: relative;
+    margin-right: 20px;
+}
+
+/*//// f9 to f12 btns background ///*/
+#first-row .part-3::before{
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -9px;
+    width: 236px;
+    height: 55px;
+    background-color: black; 
+}
+
+/*//// after f12 btns three btns ///*/
+#first-row .part-4{
+    display: flex;
+    position: relative;
+}
+
+/*//// after f12 btns background ///*/
+.part-4::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 180px;
+    height: 57px;
+    /* outline: 1px solid rgb(12, 12, 12); */
+    background-color: black; 
+    /* border-radius: 2px; */
+}
+
+/*//// lights on the num,caps and scroll btns & light*/
+
+.lights{
+    display: flex;
+    background-color: black;
+    margin-left: 25px;
+    width: 190px;
+    padding: 5px;
+    height: 40px;
+    position: relative;
+    border-radius: 50px;
+}
+
+.green p{
+    position: absolute;
+    bottom:5px;
+}
+
+/* num section with light */
+.num{
+    font-size: 13px;
+    position: absolute;
+    left: 20px;
+}
+
+.num-light{
+    /* border: 1px solid red; */
+    background-color: rgb(46, 45, 45);
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom:25px;
+    left: 29px;
+    border-radius: 10px;
+}
+
+/* caps section with light */
+.caps{
+    font-size: 13px;
+    position: absolute;
+    left: 42%;
+}
+.caps-light{
+     /* border: 1px solid red; */
+     background-color: rgb(46, 45, 45);
+     width: 8px;
+     height: 8px;
+    position: absolute;
+    bottom:25px;
+    left: 47%;
+    border-radius: 10px;
+}
+
+/* scroll section with light */
+.scroll{
+    font-size: 13px;
+    position: absolute;
+    right: 20px;
+}
+
+.scroll-light{
+    background-color: rgb(46, 45, 45);
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom:25px;
+    left: 150px;
+    border-radius: 10px;
+}
+/*/////////////////////////////////////////////// first line ended ////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////// second -row  2 /////////////////////////////////////*/
+
+#second-row{
+    display: flex;
+    margin: 20px 0px 15px 0px;
+}
+/*//////////////// this style is for whole btns from second line to second-last (2 to 5)no of lines ///////////////////*/
+.section{
+    display: flex;
+    position: relative;
+}
+
+.section::before{
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -9px;
+    width: 875px;
+    height: 55px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: rgb(7, 7, 7); 
+}
+
+/* only for backspace */
+#backspace{
+    width: 100px;
+  }
+  
+ 
+ /*// part-2 in second line  //*/
+
+#second-row .part-2{
+    display: flex;
+    margin-left: 20px; 
+    position: relative;
+}
+
+.part-2::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -9px;
+    width: 178px;
+    height: 53px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: black; 
+}
+
+/*/// .part-3 of second line ////*/
+#second-row .part-3{
+    display: flex;
+    margin-left: 20px; 
+position: relative;
+}
+/* background for part-3  */
+.part-3::before{
+content: "";
+position: absolute;
+top: -6px;
+left: -9px;
+width: 238px;
+height: 53px;
+outline: 1px solid rgb(12, 12, 12);
+background-color: black; 
+}
+/*//////////////////////////////////////////// second line ended ///////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////// third line  ////////////////////////////////////////////////////*/
+
+#third-row{
+    display: flex;
+    margin: 0px 0px;
+}
+ 
+/* only for buttons who wants to diffrent css to make diffrent */
+
+/* tab btn and svg*/
+#Tab{
+    width: 65px;
+    font-size: 14px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+#Tab:active{
+   font-size: 11px; 
+}
+
+.tab-arrows svg{
+    transform: translate(4px ,25%);
+}
+
+/* main enter btn and svg*/
+#enter{
+    width: 80px;
+   border-top: transparent;
+   font-size: 13px;
+}
+
+.enter-arrows svg{
+    transform: translate(-160% , 120%);
+}
+
+#enter:active{
+    font-size: 11px;
+}
+
+/* paranthisis and reverse paranthisis third line only for get different css  */
+#paranthi{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 18px;
+    line-height: 16px;
+    font-size: 11px;
+}
+
+#paranthi:active{
+    font-size: 9px;
+}
+
+#rev-paranthi{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 18px;
+    line-height: 16px;
+    font-size: 11px;
+}
+
+#rev-paranthi:active{
+    font-size: 9px;
+}
+
+/* third line's part-2 */
+#third-row .part-2{
+    display: flex;
+    margin-left: 20px;
+    position: relative;
+ }
+/* for background */
+ #third-row .part-2::before{
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -9px;
+    width: 178px;
+    height: 53px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: black; 
+}  
+
+/* third line's part-3 */
+#third-row .part-3{
+    display: flex;
+    margin-left: 21px;
+    position: relative;
+ }
+/* background part-3 */
+ #third-row .part-3::before{
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -10px;
+    width: 238px;
+    height: 53px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: black; 
+}
+
+/* give btns name as it is to id  */
+#char-8{
+    position: relative;
+}
+
+/* svg to char-8 */
+#char-8 svg{
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+}
+
+  #plus{
+    height: 95px;
+    position: absolute;
+    top: -55px;
+    right: -57px;
+}
+
+/*////////////////// third section /////////////////////////*/
+
+/*////////////////// fourth section /////////////////////////*/
+/* to make horizontal this line */
+#fourth-row{
+    display: flex;
+    margin: 14px 0px;
+}
+
+ /* first part of fourth line to get different css*/
+#capslock{
+    width: 90px;
+} 
+
+#semi-co{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 18px;
+}
+
+#quote{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 18px;
+}
+
+#slash{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 18px;
+}
+
+#down-enter{
+    width: 56px;
+    border-top: none;
+    outline: white;
+    border-top: white;
+    top: -2px;
+    border-top: transparent;
+}
+
+
+/* second section is not here */
+
+/* for third section of third line to get black outline */
+#fourth-row .part-3{
+    display: flex;
+    margin-left: 214px;
+    position: relative;
+ }
+
+ #fourth-row .part-3::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -10px;
+    width: 238px;
+    height: 53px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: black; 
+}
+
+/* for third section's numeric btn's  */
+#char-4{
+    position: relative;
+}
+
+#char-4 svg{
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    transform: rotate(180deg);
+}
+
+
+#char-6{
+    position: relative;
+}
+
+#char-6 svg{
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+}
+
+/*///////////////////////////  fourth row  /////////////////////////*/
+
+/* //////////////////////////  fifth row  ///////////////////////// */
+
+#fifth-row{
+    display: flex;
+    margin: 0px 0px;
+}
+ /* for first part of fifth line*/
+/* left shift */
+ #shift{
+    width: 115px;
+    position: relative;
+    letter-spacing: 1px;
+    padding-right: 30px;
+}
+/* left shift img */
+#shift img{
+  position: absolute;  
+  height: 16px;
+  width: 15px;
+  filter: invert(100%);
+  left: 14px;
+  transform: rotate(90deg);
+}
+/* , for this */
+.coma-span{
+    line-height: 1px;
+    text-align: center;
+    padding-left: 10px;
+}
+/* < for this symbol */
+#open-syn{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 10px 18px 5px 0px;
+}
+
+.open-syn-span{
+    line-height: 30px;
+    text-align: center;
+    padding-left: 10px;
+}
+/* > for this symbol */
+#close-syn{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 0px 18px 5px 0px;
+}
+
+.close-syn-span{
+    line-height: 30px;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.dot-span{
+    line-height: 1px;
+    text-align: center;
+    padding-left: 15px;
+}
+
+/* for shift button */
+#r-shift{
+    width:148px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-right: 60px;
+}
+
+/* for shifts img*/
+#r-shift img{
+  position: absolute;  
+  height: 16px;
+  width: 15px;
+  filter: invert(100%);
+  left: 14px;
+  transform: rotate(90deg);
+}
+
+/*//////// first part ended ///////*/
+
+/*  for second section in fifth line*/
+ #fifth-row .part-2{
+    display: flex;
+    margin-left: 20px;
+    position: relative;
+ }
+
+ #fifth-row .part-2::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 48px;
+    width: 65px;
+    height: 53px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: black; 
+}
+
+/* for section of arrows and img */
+#Up-arro{
+    margin: 0px 58px;
+}
+/*///////// part-2 end ////////////*/
+
+/*  for third section in fifth line*/
+#fifth-row .part-3{
+    display: flex;
+    margin-left: 32px;
+    position: relative;
+ }
+
+ #fifth-row .part-3::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -10px;
+    width: 238px;
+    height: 53px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: black; 
+}
+
+#end-3{
+    font-size: 14px; 
+    display: flex;
+    flex-direction: column;
+}
+
+#end-3:active{
+    font-size: 12px; 
+}
+
+/* for btn no-2 arrow in fifth line part-3*/
+#char-2{
+    position: relative;
+}
+
+#char-2 svg{
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+}
+
+#right-enter{
+    position: absolute;
+    right: -59px;
+    height: 94px;
+    z-index: 1;
+}
+
+/*//////////// fifth - row ended /////////////*/
+
+/* /////////// sixth - row ///////////// */
+
+/* holiding sixth line */
+#sixth-row{
+    display: flex;
+    margin: 14px 0px;
+}
+
+ /* only for all btns in sixth row */
+.btn5{
+    margin-right: 13px;
+    width: 66px;
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(46, 45, 45);
+    border-radius: 20px;
+    color: white;
+    border-radius: 23px;
+    position: relative;
+    box-shadow: 0 0 0 6px #1a1919,
+           0 0 0 5px #181818;
+    border-radius: 1px;
+    font-size:14px;   
+}
+
+/* for btn when click */
+.btn5:active{
+     box-shadow: inset 0 0 0 1px #131313,
+                 0 0 0 5px #131313;
+                 font-size: 12px;
+ }
+
+
+ /*///////// first part of sixth line //////*/
+
+ /*on windows btn have img */
+#windows img{
+    height: 20px;
+    width: 16px;
+    transform: translate(-2px , 20%);
+    filter: invert(100%);
+ }
+ 
+#windows img:active{
+     width: 16px;
+     height: 18px;
+ }
+ 
+ /* target btns differently for width */
+#space{
+     width: 315px;
+ }
+ 
+.section #empty-btn{
+     width: 55px;
+ }
+ 
+#r-ctrl{
+     width: 65px;
+ }
+ 
+ /* holds part-2 of the sixth line */
+#sixth-row .part-2{
+    display: flex;
+    margin-left: 18px;
+    position: relative;
+ }
+/* background color of the part-2 */
+ #sixth-row .part-2::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -10px;
+    width: 180px;
+    height: 53px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: black; 
+}
+
+/* in part-2 have arrow keys */
+/* left arrow */
+.part-2 #char-left-arrow {
+    width: 45px;
+}
+/* down arrow */
+.part-2 #char-down-arrow {
+    width: 45px;
+}
+ /* right arrow */ 
+.part-2 #char-right-arrow {
+    width: 45px;
+}
+
+ /* holds part-3 of the sixth line */
+#sixth-row .part-3{
+    display: flex;
+    margin-left: 20px;
+    position: relative;
+ }
+/* background color of the part-3 */
+ #sixth-row .part-3::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -9px;
+    width: 238px;
+    height: 53px;
+    outline: 1px solid rgb(12, 12, 12);
+    background-color: black; 
+}
+/* in part-3 btns */
+#ins-0{
+    width: 105px;
+}
+
+#de{
+    width: 45px;
+}
+/* enter btn is define in fifth section */
+
+/*/////////////// end  ////////////*/

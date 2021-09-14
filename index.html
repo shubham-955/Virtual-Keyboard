@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- this is an empty div for show what user is typing -->
+        <div id="demo1"> </div>
+        <!-- end -->
+
+        <!-- .keyboard is handleing whole keyboard -->
+        <div class="keyboard">
+            <!-------------------------------------- first row of the keyboard --------------------------------------->
+            <div id="first-row">
+                <!-- esc btn -->
+                <div class="esc-btn">
+                    <div class="btn" id="esc">Esc</div>
+                </div>
+                <!--///////// f series btns //////////-->
+
+                <!-- f1 - f4 btns -->
+                <div class="part-1">
+                    <div class="btn" id="f1">F1</div>
+                    <div class="btn" id="f2">F2</div>
+                    <div class="btn" id="f3">F3</div>
+                    <div class="btn" id="f4">F4</div>
+                </div>
+
+                <!-- f5 - f-8 btns -->
+                <div class="part-2">
+                    <div class="btn" id="f5">F5</div>
+                    <div class="btn" id="f6">F6</div>
+                    <div class="btn" id="f7">F7</div>
+                    <div class="btn" id="f8">F8</div>
+                </div>
+
+                <!-- f9 - f-12 btns -->
+                <div class="part-3">
+                    <div class="btn" id="f9">F9</div>
+                    <div class="btn" id="f10">F10</div>
+                    <div class="btn" id="f11">F11</div>
+                    <div class="btn" id="f12">F12</div>
+                </div>
+
+                <!-- after f12 btns -->
+                <div class="part-4">
+                    <div class="btn" id="prt">Prt Sc
+                        <span>SysRq</span>
+                    </div>
+                    <div class="btn" id="scroll" onclick="funcScr()">
+                        Scroll Lock
+                    </div>
+
+                    <div class="btn" id="pause">
+                        Pause Break
+                    </div>
+                </div>
+
+                <!------ num caps & scroll lights ------>
+
+                <div class="lights">
+                    <!-- all three btns and lights -->
+                    <div class="green">
+                        <span class="num-light" id="circle1"></span>
+                        <p class="num">Num</p>
+                    </div>
+                    <div class="green">
+                        <span class="caps-light" id="circle"></span>
+                        <p class="caps">Caps</p>
+                    </div>
+                    <div class="green">
+                        <span class="scroll-light" id="circle3"></span>
+                        <p class="scroll">Scroll</p>
+                    </div>
+                </div>
+
+            </div>
+            <!----------------------------------------------------- first line is ended -------------------------------------------------------->
+
+            <!------------------------------------------------- second-row started numeric buttons --------------------------------------==-->
+            <div id="second-row">
+                <!-- section to hold them -->
+                <div class="section">
+
+                    <div class="btn" id="backtiks" onclick="func20()">
+                        <span>~</span>
+                        <span>`</span>
+                    </div>
+
+                    <div class="btn" id="second-line-btn" onclick="func21()">
+                        <span>!</span>
+                        <span>1</span>
+                    </div>
+
+                    <div class="btn" id="second-line-btn" onclick="func22()">
+                        <span>@</span>
+                        <span>2</span>
+                    </div>
+
+                    <div class="btn" id="second-line-btn" onclick="func23()">
+                        <span>#</span>
+                        <span>3</span>
+                    </div>
+
+                    <div class="btn" id="sec4" onclick="func24()">
+                        <span>$</span>
+                        <span>4</span>
+                    </div>
+
+                    <div class="btn" id="sec5" onclick="func25()">
+                        <span>%</span>
+                        <span>5</span>
+                    </div>
+
+                    <div class="btn" id="sec6" onclick="func26()">
+                        <span>^</span>
+                        <span>6</span>
+                    </div>
+
+                    <div class="btn" id="sec7" onclick="func27()">
+                        <span>&</span>
+                        <span>7</span>
+                    </div>
+
+                    <div class="btn" id="sec8" onclick="func28()">
+                        <span>*</span>
+                        <span>8</span>
+                    </div>
+
+                    <div class="btn" id="sec9" onclick="func29()">
+                        <span>(</span>
+                        <span>9</span>
+                    </div>
+                    <div class="btn" id="sec0" onclick="func30()">
+                        <span>)</span>
+                        <span>0</span>
+                    </div>
+
+                    <div class="btn" id="sec-min" onclick="func31()">
+                        <span>_</span>
+                        <span>-</span>
+                    </div>
+
+                    <div class="btn" id="sec-equal" onclick="func32()">
+                        <span>+</span>
+                        <span>=</span>
+                    </div>
+
+                    <div class="btn" id="backspace" onclick="funcBas()">
+                        Backspace
+                    </div>
+
+                </div>
+
+                <!-- second part of second line -->
+                <div class="part-2">
+                    <div class="btn" id="insert">
+                        Insert
+                    </div>
+                    <div class="btn" id="Home">
+                        Home
+                    </div>
+                    <div class="btn" id="PageUp">
+                        <span>Page</span>
+                        <span>Up</span>
+                    </div>
+                </div>
+
+                <!----- third part of second line ----->
+                <div class="part-3">
+                    <div class="btn" id="num" onclick="funcNum()">
+                        <span>Num</span>
+                        <span>Lock</span>
+                    </div>
+                    <div class="btn" id="f-slash" onclick="funcDiv()">
+                        /
+                    </div>
+                    <div class="btn" id="multi" onclick="funcMult()">
+                        <span>*</span>
+                    </div>
+                    <div class="btn" id="minus" onclick="funcSub()">
+                        <span>-</span>
+                    </div>
+                </div>
+
+            </div>
+            <!------------------------------------------------- second line is end ----------------------------------------------------->
+
+            <!------------------------------------------------ third row tab + chars ------------------------------------------------->
+            <div id="third-row">
+
+                <div class="section">
+                    <div class="btn" id="Tab">
+                        <span>Tab</span>
+                        <span class="tab-arrows"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z" />
+                            </svg></span>
+                    </div>
+                    <div class="btn" id="Q" onclick="funcq()">
+                        <span>Q</span>
+                    </div>
+
+                    <div class="btn" id="W" onclick="funcw()">
+                        <span>W</span>
+                    </div>
+
+                    <div class="btn" id="E" onclick="funce()">
+                        <span>E</span>
+                    </div>
+
+                    <div class="btn" id="R" onclick="funcr()">
+                        <span>R</span>
+                    </div>
+
+                    <div class="btn" id="T" onclick="funct()">
+                        <span>T</span>
+                    </div>
+
+                    <div class="btn" id="Y" onclick="funcy()">
+                        <span>Y</span>
+                    </div>
+
+                    <div class="btn" id="U" onclick="funcu()">
+                        <span>U</span>
+                    </div>
+
+                    <div class="btn" id="I" onclick="funci('i')">
+                        <span>I</span>
+                    </div>
+
+                    <div class="btn" id="O" onclick="funco('o')">
+                        <span>O</span>
+                    </div>
+
+                    <div class="btn" id="P" onclick="funcp()">
+                        <span>P</span>
+                    </div>
+
+                    <div class="btn" id="paranthi" onclick="func11()">
+                        <span>{</span>
+                        <span>[</span>
+                    </div>
+
+                    <div class="btn" id="rev-paranthi" onclick="func12()">
+                        <span>}</span>
+                        <span>]</span>
+                    </div>
+
+                    <div class="btn" id="enter" onclick="funcEnt()">
+                        Enter
+                    </div>
+                </div>
+
+                <!----- second part of third line ----->
+                <div class="part-2">
+                    <div class="btn" id="delte" onclick="funcDel()">
+                        Delete
+                    </div>
+
+                    <div class="btn" id="end">
+                        End
+                    </div>
+
+                    <div class="btn" id="Page-d">
+                        <span>Page</span>
+                        <span>Down</span>
+                    </div>
+
+                </div>
+
+                <!----- third part of third line ----->
+                <div class="part-3">
+                    <div class="btn" id="home" onclick="func7()">
+                        <span>7</span>
+                        <span>Home</span>
+                    </div>
+
+                    <div class="btn" id="char-8" onclick="func8()">
+                        <span>8</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
+                            </svg></span>
+                    </div>
+
+                    <div class="btn" id="pgup-9" onclick="func9()">
+                        <span>9</span>
+                        <span>PgUp</span>
+                    </div>
+
+                </div>
+            </div>
+            <!----------------------------------------------------------- third line is end ---------------------------------------------------->
+
+            <!------------------------------------------------------------- fourth-row -------------------------------------------------------->
+
+            <div id="fourth-row">
+
+                <div class="section">
+                    <div class="btn" id="capslock" onclick="funccap()">
+                        <span>Caps Lock</span>
+                    </div>
+                    <div class="btn" id="Q" onclick="funca()">
+                        <span>A</span>
+
+                    </div>
+                    <div class="btn" id="W" onclick="funcs()">
+                        <span>S</span>
+                    </div>
+                    <div class="btn" id="E" onclick="funcd()">
+                        <span>D</span>
+                    </div>
+                    <div class="btn" id="R" onclick="funcf()">
+                        <span>F</span>
+                    </div>
+
+                    <div class="btn" id="T" onclick="funcg()">
+                        <span>G</span>
+                    </div>
+                    <div class="btn" id="Y" onclick="funch()">
+                        <span>H</span>
+                    </div>
+                    <div class="btn" id="U" onclick="funcj()">
+                        <span>J</span>
+                    </div>
+                    <div class="btn" id="I" onclick="funck()">
+                        <span>K</span>
+                    </div>
+
+                    <div class="btn" id="O" onclick="funcl()">
+                        <span>L</span>
+                    </div>
+                    <div class="btn" id="semi-co" onclick="func13()">
+                        <span>:</span>
+                        <span>;</span>
+                    </div>
+                    <div class="btn" id="quote" onclick="func14()">
+                        <span>"</span>
+                        <span>'</span>
+                    </div>
+                    <div class="btn" id="slash" onclick="func15()">
+                        <span>|</span>
+                        <span>\</span>
+                    </div>
+                    <div class="btn" id="down-enter" onclick="funcCur()">
+
+                    </div>
+                </div>
+
+                <!-- direct third part on fourth line, there is not have second part -->
+                <div class="part-3">
+                    <div class="btn" id="char-4" onclick="func4()">
+                        <span>4</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg></span>
+                    </div>
+                    <div class="btn" id="Home" onclick="func5()">
+                        <span>5</span>
+                    </div>
+                    <div class="btn" id="char-6" onclick="func6()">
+                        <span>6</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg></span>
+                    </div>
+                    <div class="btn" id="plus" onclick="funcAdd()">
+                        <span>+</span>
+                    </div>
+
+                </div>
+            </div>
+            <!----------------------------------------------------------- fourth line is end ------------------------------------------------>
+
+            <!-------------------------------------------------------------- fifth line--------------------------------------------------------->
+
+            <div id="fifth-row">
+
+                <div class="section">
+                    <div class="btn" id="shift" onclick="funcSh()">
+                        <span>Shift</span>
+                        <img src="img\shift.png" alt="">
+                    </div>
+                    <div class="btn" id="Z" onclick="funcz()">
+                        <span>Z</span>
+
+                    </div>
+                    <div class="btn" id="X" onclick="funcx()">
+                        <span>X</span>
+                    </div>
+                    <div class="btn" id="C" onclick="funcc()">
+                        <span>C</span>
+                    </div>
+                    <div class="btn" id="V" onclick="funcv()">
+                        <span>V</span>
+                    </div>
+
+                    <div class="btn" id="B" onclick="funcb()">
+                        <span>B</span>
+                    </div>
+                    <div class="btn" id="N" onclick="funcn()">
+                        <span>N</span>
+                    </div>
+                    <div class="btn" id="M" onclick="funcm()">
+                        <span>M</span>
+                    </div>
+                    <div class="btn" id="open-syn" onclick="func16()">
+                        <span class="open-syn-span">
+                        </span>
+                        <span class="coma-span"> , </span>
+                    </div>
+
+                    <div class="btn" id="close-syn" onclick="func17()">
+                        <span class="close-syn-span">></span>
+                        <span class="dot-span">.</span>
+                    </div>
+                    <div class="btn" id="semi-co" onclick="func18()">
+                        <span>?</span>
+                        <span>/</span>
+                    </div>
+
+                    <div class="btn" id="r-shift" onclick="funcSh()">
+                        <span>Shift</span>
+                        <img src="img\shift.png" alt="">
+                    </div>
+                </div>
+
+                <!---- second part of fifth line ---->
+                <div class="part-2">
+                    <div class="btn" id="Up-arro">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                            </svg></span>
+                    </div>
+                </div>
+
+                <!---- third part of fifth line ---->
+                <div class="part-3">
+                    <div class="btn" id="end-3" onclick="func1()">
+                        <span>1</span>
+                        <span>end</span>
+                    </div>
+                    <div class="btn" id="char-2" onclick="func2()">
+                        <span>2</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
+                            </svg></span>
+                    </div>
+                    <div class="btn" id="Pagedn" onclick="func3()">
+                        <span>3</span>
+                        <span>PgDn</span>
+                    </div>
+                    <!-- enter btn have big hight to covers this and below line -->
+                    <div class="btn" id="right-enter" onclick="funcEnt()">
+                        <span>Enter</span>
+                    </div>
+                </div>
+
+            </div>
+            <!---------------------------------------------------- fifth line is end ------------------------------------------------------------>
+
+            <!------------------------------------------------- sixth-row started  bottom btns ------------------------------------------------->
+            <!-- in this lines btns have bigger width compare to others,that's why they have different class (btn5) to all -->
+            <div id="sixth-row">
+
+                <div class="section">
+                    <div class="btn5" id="ctrl">
+                        <span>Ctrl</span>
+                    </div>
+
+                    <div class="btn5" id="windows">
+                        <img src="img\Windows-Logo-Free-PNG-Image.png" alt="">
+                    </div>
+
+                    <div class="btn5" id="alt-left">
+                        <span>Alt</span>
+                    </div>
+
+                    <div class="btn5" id="space" onclick="funcsp()">
+                        <span></span>
+                    </div>
+
+                    <div class="btn5" id="alt-right">
+                        <span>Alt</span>
+                    </div>
+
+                    <div class="btn5" id="sec-">
+                        <span>Fn</span>
+                    </div>
+
+                    <div class="btn5" id="empty-btn">
+                        <!-- i dont's have any icon or any logo for this btn that's why this is empty -->
+                    </div>
+                    <div class="btn5" id="r-ctrl">
+                        <span>Ctrl</span>
+                    </div>
+
+                </div>
+
+                <!-- second part sixth line -->
+                <div class="part-2">
+                    <div class="btn5" id="char-left-arrow">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                            </svg></span>
+                    </div>
+                    <div class="btn5" id="char-down-arrow">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
+                            </svg></span>
+                    </div>
+                    <div class="btn5" id="char-right-arrow">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                            </svg></span>
+                    </div>
+                </div>
+                <!-- third part of btns in sixth line -->
+                <div class="part-3">
+                    <div class="btn5" id="ins-0" onclick="func0()">
+                        <span>0</span>
+                        <span>ins</span>
+                    </div>
+
+                    <div class="btn5" id="de">
+                        <span>.</span>
+                        <span>Del</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!--------- keyboard end--------->
+
+    </div>
+    <!----------------------------------- container end ------------------------------------>
+
+</body>
+<script src="keys.js"></script>
+
+</html>
